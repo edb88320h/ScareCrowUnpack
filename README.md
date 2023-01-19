@@ -8,7 +8,9 @@ A detailed description and functionality can be found in the presentation https:
 <ol>
 <li>loads the file as a PE image (unfortunately, because of the large size of the binary files, it takes quite a long time =();</li>
 <li>searches for the start of the function responsible for decryption;</li>
+  ![start of the function](https://github.com/edb88320h/ScareCrowUnpack/tree/main/images/start.png)
 <li>searches for the end of this function;</li>
+  ![end of the function](https://github.com/edb88320h/ScareCrowUnpack/tree/main/images/end.png)
 <li>disassembles the binary data, parses the assembly instructions and their arguments, gets the offsets at which the encrypted load fragments are stored;</li>
 <li>also takes the encryption key and initialization vector for the AES-CBC from the disassembled listing;</li>
 <li>forms a coded and encrypted payload from fragments;</li>
