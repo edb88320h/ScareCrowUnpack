@@ -14,7 +14,7 @@ A detailed description and functionality can be found in the presentation https:
 <img src="/images/end.png" alt="End of the function"/>
 <li>Disassembles the binary data, parses the assembly instructions and their arguments, gets the offsets at which the encrypted load fragments are stored;</li>
 <li>Also takes the encryption key and initialization vector for the AES-CBC from the disassembled listing;</li>
-<li>Forms a coded and encrypted payload from fragments;</li>
+<li>Forms an encoded and encrypted payload from fragments;</li>
 <li>Decodes, decrypts the data, and then performs the unhexlify procedure.</li>
 </ol>
 
