@@ -31,14 +31,12 @@ class ScareCrowDecrypt():
         ep = pe.OPTIONAL_HEADER.AddressOfEntryPoint
         ep_ava = pe.OPTIONAL_HEADER.ImageBase
         for cnt in range(len(data) - 5):
-            if data[cnt] == 0x31 and data[cnt + 2] == 0x31 and data[cnt + 4] == 0x31 and data[cnt + 6] == 0x48 and data[
-                cnt + 13] == 0xbe:  # find start of decryption function in binary
+            if data[cnt] == 0x31 and data[cnt + 2] == 0x31 and data[cnt + 4] == 0x31 and data[cnt + 6] == 0x48 and data[cnt + 13] == 0xbe:  # find start of decryption function in binary
                 print("[+] find a start of function")
                 j = cnt
 
                 while 1:
-                    if data[j] == 0x48 and data[j + 1] == 0x81 and data[j + 2] == 0xc4 and data[j + 5] == 0x00 and data[
-                        j + 6] == 0x00 and data[j + 7] == 0xc3:  # find end of function
+                    if data[j] == 0x48 and data[j + 1] == 0x81 and data[j + 2] == 0xc4 and data[j + 5] == 0x00 and data[j + 6] == 0x00 and data[j + 7] == 0xc3:  # find end of function
                         break
                     else:
                         self.code += pack("B", data[j])
@@ -47,8 +45,7 @@ class ScareCrowDecrypt():
                     if n.op_str.find(
                             "rip +") != -1 and n.mnemonic == "lea":  # search for an instruction that puts an offset on the data in the register
                         try:
-                            addr = n.address + int(n.op_str.split("rip +")[1][:-1],
-                                                   16) + 7  # tried to get an offset to data
+                            addr = n.address + int(n.op_str.split("rip +")[1][:-1],16) + 7  # tried to get an offset to data
                         except IndexError:
                             print("something wrong")
                     if n.op_str.find("0x18") != -1 and n.op_str.find("]") == -1:  # search for the iv
