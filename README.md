@@ -1,9 +1,10 @@
 # ScareCrowUnpack
+<h2>Overwiew</h2>
 The script was created to statically unpack binary data covered by the ScareCrow packer (https://github.com/optiv/ScareCrow). 
 
 A detailed description and functionality can be found in the presentation https://offzone.moscow/getfile/?bmFtZT1BLkdyaWdvcnlhbl9ELktvbG9za292X0FQVCBhdHRhY2tzIG9uIFJ1c3NpYW4gY29tcGFuaWVzIGluIEgxIDIwMjItIGhpZ2hsaWdodHMucGRmJklEPTI0MDg=
 
-Algorithm of the script:
+<h2>Algorithm of the script</h2>
 1) loads the file as a PE image (unfortunately, because of the large size of the binary files, it takes quite a long time =();
 2) searches for the start of the function responsible for decryption;
 3) searches for the end of this function;
