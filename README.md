@@ -1,5 +1,6 @@
 # ScareCrowUnpack
 The script was created to statically unpack binary data covered by the ScareCrow packer (https://github.com/optiv/ScareCrow). 
+
 A detailed description and functionality can be found in the presentation https://offzone.moscow/getfile/?bmFtZT1BLkdyaWdvcnlhbl9ELktvbG9za292X0FQVCBhdHRhY2tzIG9uIFJ1c3NpYW4gY29tcGFuaWVzIGluIEgxIDIwMjItIGhpZ2hsaWdodHMucGRmJklEPTI0MDg=
 
 Algorithm of the script:
