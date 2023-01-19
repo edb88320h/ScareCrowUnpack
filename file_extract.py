@@ -1,5 +1,4 @@
 import pefile
-import mmap
 from capstone import *
 from struct import pack
 from Crypto.Cipher import AES
@@ -78,9 +77,3 @@ if __name__ == "__main__":
     unpacker = ScareCrowDecrypt()
     pe = pefile.PE(file)
     unpacker.fileparse(pe, file)
-
-
-
-
-
-
