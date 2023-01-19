@@ -21,4 +21,6 @@ A detailed description and functionality can be found in the presentation https:
 <h2>How to use</h2>
 To get the payload, run the script with the --f parameter, passing it the path to the file. The output file will be created in the same directory labeled "_payload_decr.bin"
 
-<img src="/images/example.gif" alt="End of the function"/>
+<p>
+<img src="/images/example.gif" alt="Example of using"/>
+</p>
