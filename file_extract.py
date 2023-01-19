@@ -5,7 +5,6 @@ from Crypto.Cipher import AES
 from base64 import b64decode
 from binascii import unhexlify
 import argparse
-import click
 
 class ScareCrowDecrypt():
     def __init__(self):
